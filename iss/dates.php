@@ -20,13 +20,19 @@ $users = array(
 );
 
 foreach ($users as $user) {
-    $php_array = json_decode(file_get_contents("http://api.open-notify.org/iss-pass.json?lat=".$user->latitude."&lon=".$user->longitude))->response;
+    $php_array = json_decode(file_get_contents("http://api.open-notify.org/iss-pass.json?lat=".$user->latitude."&lon=".$user->longitude."&n=100"))->response;
     foreach ($php_array as $date) {
         $date->latitude = $user->latitude;
         $date->longitude = $user->longitude;
         $date->name = $user->name;
     }
     echo "dates.push(".json_encode($php_array).");";
+}
+if (!empty($_POST)) {
+    echo "var dateId = ".$_POST['dates'].";";
+}
+else {
+    echo "var dateId = null;";
 }
 echo "</script>";
 ?>
@@ -50,6 +56,21 @@ echo "</script>";
 	<body>
         <h1 id="title"></h1>
         <div id="map"></div>
+        <form id="datesForm" method="post" action="dates.php">
+            <select id="dates" name="dates">
+            </select>
+            <input type="submit">
+        </form>
         <a href="index.php">Index</a>
 	</body>
 </html>
+
+<script>
+    var formDates = document.getElementById('dates');
+    for(var i = 0; i < sortedDates.length; i++) {
+        var opt = document.createElement('option');
+        opt.innerHTML = new Date(sortedDates[i].risetime * 1000).toLocaleString('en-GB', { timeZone: 'Europe/Paris' }) + " : " +  sortedDates[i].name;
+        opt.value = i;
+        formDates.appendChild(opt);
+    };
+</script>

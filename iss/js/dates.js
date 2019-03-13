@@ -1,18 +1,17 @@
 var findDate = dates => {
-    var result = null;
+    var resultDates = [];
     dates.forEach(dateSet => {
         dateSet.forEach(date => {
-            if (!result || result.risetime > date.risetime && date.risetime > Date.now()) {
-                result = date;
-            }
+            resultDates.push(date);
         });
     });
-    return result;
+    return resultDates.sort((a, b) => a.risetime - b.risetime);
 }
 
-var main = () => {
-    var chosenOne = findDate(dates);
+var sortedDates = findDate(dates);
 
+var main = () => {
+    var chosenOne = dateId ? sortedDates[dateId] : sortedDates[0];
     var myIcon = L.icon({
         iconUrl: "img/iss.svg",
         iconSize: [50, 50],
