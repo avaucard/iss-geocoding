@@ -2,21 +2,21 @@
 echo "<script>var dates = [];";
 
 $users = array(
-    (object) [
+    (object) array(
         'name' => 'John',
         'latitude' => '39.2796',
-        'longitude:' => '-55.3374'
-    ],
-    (object) [
+        'longitude' => '-55.3374'
+    ),
+    (object) array(
         'name' => 'Adele',
         'latitude' => '-24.6293',
-        'longitude:' => "0.7094"
-    ],
-    (object) [
+        'longitude' => "0.7094"
+    ),
+    (object) array(
         'name' => 'Hugo',
         'latitude' => '-39.9825',
-        'longitude:' => '19.5351'
-    ]
+        'longitude' => '19.5351'
+    )
 );
 
 foreach ($users as $user) {
