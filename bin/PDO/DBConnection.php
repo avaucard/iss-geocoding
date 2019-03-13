@@ -9,7 +9,7 @@
         }
 
         public function disconnectDB(){
-            $this->connection = PDOConnection::deconnexion();
+            $this->connection = PDOConnection::disconnectDB();
         }
     }
 ?>

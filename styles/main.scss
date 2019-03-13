@@ -31,6 +31,24 @@ body {
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                .form-item {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+
+                    label {
+                        color: #FFFFFF;
+                        font-weight: 600;
+                    }
+                }
         }
 
         select {
@@ -46,6 +64,7 @@ body {
             text-indent: 10px;
             width: 300px;
         }
+
         input {
             border-radius: 100px;
             border: none;
@@ -65,7 +84,8 @@ body {
             &[type=password],
             &[type=number],
             &[type=date],
-            &[type=tel] {
+            &[type=tel],
+            &[type=email] {
                 text-indent: 10px;
                 width: 300px;
             }
@@ -83,6 +103,15 @@ body {
                 transition: 0.3s;
             }
         }
+    }
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        
     }
     p {
         color: red;

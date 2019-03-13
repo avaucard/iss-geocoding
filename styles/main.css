@@ -65,6 +65,38 @@ body form .form-wrapper {
           flex-direction: column;
 }
 
+body form .form-wrapper .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body form .form-wrapper .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body form .form-wrapper .form-item label {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
 body form select {
   border-radius: 100px;
   border: none;
@@ -108,7 +140,7 @@ body form input:focus, body form input:hover {
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
-body form input[type=text], body form input[type=password], body form input[type=number], body form input[type=date], body form input[type=tel] {
+body form input[type=text], body form input[type=password], body form input[type=number], body form input[type=date], body form input[type=tel], body form input[type=email] {
   text-indent: 10px;
   width: 300px;
 }
@@ -128,6 +160,15 @@ body form input[type=submit]:hover {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+body a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: underline;
 }
 
 body p {

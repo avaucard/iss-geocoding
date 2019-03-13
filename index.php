@@ -15,8 +15,10 @@
     <form action="bin/checkLogin.php" method="POST">
         <input type="text" id="username" name="username" placeholder="Username" required>
         <input type="password" id="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Send">
+        <input type="submit" value="Log In">        
     </form>
+    <a href="./pages/signup.php">SIGN UP</a>
+
     
     <?php if(isset($_GET['error'])) { ?>
         <?php if($_GET['error'] == 1) : ?>
