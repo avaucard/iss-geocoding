@@ -1,0 +1,22 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#title {
+    width: 100%;
+    text-align: center;
+}
+
+#user {
+    width: 100%;
+    text-align: center;
+}
+
+#map {
+    width: 100%;
+    height: 640px;
+}
