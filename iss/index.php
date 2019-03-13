@@ -1,34 +1,27 @@
-<script>
-var iss_position = JSON.parse('<?php echo file_get_contents("http://api.open-notify.org/iss-now.json"); ?>').iss_position;
+<?php
 
-var users = [
-    {
-        name:'John',
-        latitude:'39.2796',
-        longitude:'-55.3374'
-    },
-    {
-        name:'Adele',
-        latitude:"-24.6293",
-        longitude:"0.7094"
-    },
-    {
-        name:'Hugo',
-        latitude: "-39.9825",
-        longitude: "19.5351"
-    },
-    {
-        name:'Test',
-        latitude: "-51.2111",
-        longitude: "56.2542"
-    },
-    {
-        name:"Adrien",
-        latitude: "24.9483",
-        longitude: "169.2176"
-    }
-];
-</script>
+$iss_position = json_decode(file_get_contents("http://api.open-notify.org/iss-now.json"))->iss_position;
+
+ $users = array(
+    (object) array(
+        'name' => 'John',
+        'latitude' => '39.2796',
+        'longitude' => '-55.3374'
+    ),
+    (object) array(
+        'name' => 'Adele',
+        'latitude' => '-24.6293',
+        'longitude' => "0.7094"
+    ),
+    (object) array(
+        'name' => 'Hugo',
+        'latitude' => '-39.9825',
+        'longitude' => '19.5351'
+    )
+);
+
+echo "<script>var users =".json_encode($users).";var iss_position=".json_encode($iss_position)."</script>";
+?>
 
 <!DOCTYPE html>
 <html>
@@ -43,7 +36,7 @@ var users = [
             crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
             crossorigin=""></script>
-        <script src="js/main.js"></script>
+        <script src="js/index.js"></script>
 		<title>Carte</title>
 	</head>
 	<body>

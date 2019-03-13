@@ -35,12 +35,18 @@ var main = () => {
         iconAnchor: [25, 50],
         popupAnchor: [-3, -76],
     });
+    var myIcon2 = L.icon({
+        iconUrl: "img/home.svg",
+        iconSize: [50, 50],
+        iconAnchor: [25, 50],
+        popupAnchor: [-3, -76],
+    });
 
     macarte = L.map('map').setView([iss_position.latitude, iss_position.longitude], 3);
     marker = L.marker([iss_position.latitude, iss_position.longitude], { icon: myIcon }).addTo(macarte);
 
     users.forEach(user => {
-        marker = L.marker([user.latitude, user.longitude]).addTo(macarte);
+        marker = L.marker([user.latitude, user.longitude], { icon: myIcon2 }).addTo(macarte);
         marker.bindPopup(user.name);
     });
 
@@ -52,7 +58,7 @@ var main = () => {
 
     var chosenOne = closestUser(iss_position, users);
 
-    document.getElementById('title').innerHTML = "The ISS is currently over : x=[" + iss_position.latitude + "] y=[" + iss_position.longitude + "]";
-    document.getElementById('user').innerHTML = "The closest user is :" + chosenOne.name + " (" + Math.round(chosenOne.distance) + "kms)";
+    document.getElementById('title').innerHTML = "The ISS is currently over : latitude " + iss_position.latitude + " & longitude " + iss_position.longitude;
+    document.getElementById('user').innerHTML = "The closest user is : " + chosenOne.name + " (" + Math.round(chosenOne.distance) + "kms)";
 }
 window.onload = () => main();
