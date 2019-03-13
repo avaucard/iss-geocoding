@@ -1,0 +1,200 @@
+body, html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, #5177f6, #b478d7);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%
+}
+
+/*MAIN Page*/
+h1 {
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    border-radius: 100px;
+    border: none;
+    box-shadow: 3px 3px 10px #505050;
+    transition: box-shadow 0.3s;
+
+    margin: 20px;
+
+    font-size: 1.3rem;
+    color: rgba(100, 100, 100, 0.7);
+
+    height: 50px;
+    width: 200px;
+}
+
+form input:focus, form input:hover {
+    box-shadow: 3px 3px 10px #101010;
+    transition: box-shadow 0.3s;
+}
+
+form input[type=text], form input[type=password] {
+    text-indent: 10px;
+
+    width: 300px;
+}
+
+form input[type=submit] {
+    background-color: #FFFFFF;
+    transition: 0.3s;
+
+    text-transform: uppercase;
+    text-align: center;
+    width: 150px;
+}
+
+form input[type=submit]:hover {
+    background-color: rgba(100, 100, 100, 0.7);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+p {
+    color: red;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px black;
+}
+
+
+/*REQUESTS*/
+button {
+    border-radius: 50px;
+    border: none;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+
+    color: rgb(100, 100, 100);
+    font-size: 1.5rem;
+
+    margin: 5px;
+
+    height: 70px;
+    width: 200px;
+}
+  
+button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer;
+}
+
+.disconnect {
+    font-size: 0.75rem;
+    height: 35px;
+    width: 100px;
+}
+
+.disconnect:hover {
+    background-color: rgb(218, 9, 9); /* Green */
+}
+
+.disconnect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+/*RESPONSES*/
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* height: 50%; */
+    width: 70%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FFFFFF;
+    border-radius: 30px;
+
+    margin: 20px;
+
+    height: 250px;
+    width: 450px;
+
+}
+
+.booking-card-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    border-right: solid 1px black;
+
+    height: 80%;
+    width: 30%;
+}
+
+.booking-card-left h1{
+    color: black;
+}
+
+.booking-card-left p{
+    color: black;
+}
+
+.booking-card-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    height: 80%;
+    width: 70%;
+
+}
+
+.booking-card-member {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 90%;
+}
+
+.booking-card-member h2 {
+    text-transform: uppercase;
+    text-align: left;
+    width: 100%;
+}
+
+.booking-card-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+}
+
+.booking-card-label p {
+    text-shadow: none;
+    color: rgba(100, 100, 100, 0.6);
+
+    text-align: left;
+}
