@@ -13,7 +13,7 @@ var sortedDates = findDate(dates);
 var main = () => {
     var chosenOne = dateId ? sortedDates[dateId] : sortedDates[0];
     var myIcon = L.icon({
-        iconUrl: "img/iss.svg",
+        iconUrl: "../iss/img/iss.svg",
         iconSize: [50, 50],
         iconAnchor: [25, 50],
         popupAnchor: [-3, -76],

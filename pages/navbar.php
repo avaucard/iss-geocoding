@@ -1,1 +1,2 @@
 <a href="http://localhost/hackathon-ais/bin/disconnect.php"><button class="disconnect" style="position:fixed;">Disconnect</button></a>
+<a href="live.php"><button class="details">Live view</button></a>   

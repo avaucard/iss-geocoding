@@ -23,10 +23,18 @@ body {
   width: 100%;
 }
 
+body.home, body.live {
+  margin: 0;
+}
+
 body h1 {
   color: #FFFFFF;
   font-size: 3rem;
   font-weight: 400;
+}
+
+body h2 {
+  color: #FFFFFF;
 }
 
 body p.error {
@@ -208,6 +216,18 @@ body .disconnect:hover {
   /* Green */
 }
 
+body .details {
+  margin: 10px;
+  font-size: 0.75rem;
+  height: 35px;
+  width: 100px;
+}
+
+body .details:hover {
+  background-color: #008;
+  /* Green */
+}
+
 body .return {
   position: absolute;
   top: 0;
@@ -269,5 +289,12 @@ body .profile-infos .profile-info {
 
 body .profile-infos p {
   color: #505050;
+}
+
+body #map {
+  width: 100%;
+  height: 640px;
+  -webkit-box-shadow: 0px 0px 10px 0px #000;
+          box-shadow: 0px 0px 10px 0px #000;
 }
 /*# sourceMappingURL=main.css.map */

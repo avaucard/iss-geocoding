@@ -30,13 +30,13 @@ var closestUser = (target, users) => {
 
 var main = () => {
     var myIcon = L.icon({
-        iconUrl: "img/iss.svg",
+        iconUrl: "../iss/img/iss.svg",
         iconSize: [50, 50],
         iconAnchor: [25, 50],
         popupAnchor: [-3, -76],
     });
     var myIcon2 = L.icon({
-        iconUrl: "img/home.svg",
+        iconUrl: "../iss/img/home.svg",
         iconSize: [50, 50],
         iconAnchor: [25, 50],
         popupAnchor: [-3, -76],

@@ -80,7 +80,7 @@
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
 
-            $tab=[];
+            $tab=array();
             while($result = $stmt->fetch(PDO::FETCH_OBJ)){
                 // var_dump($result);
                 $city = urlencode($result->city);
@@ -100,7 +100,7 @@
                 $request = file_get_contents("https://nominatim.openstreetmap.org/search?city={$city}&country={$country}&format=json&polygon=1&addressdetails=1", false, $context);
                 $longlat = json_decode($request);
                 
-                array_push($tab, array($result->firstname, $result->surname, $longlat[0]->lat, $longlat[0]->lon));
+                array_push($tab, (object) array('name' => $result->firstname, 'latitude'=>$longlat[0]->lat,'longitude'=> $longlat[0]->lon));
                 
             }         
             $this->disconnectDB();
