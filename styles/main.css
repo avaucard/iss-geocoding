@@ -23,11 +23,6 @@ body {
   width: 100%;
 }
 
-body.bookings, body.facilities, body.members, body.insertMember {
-  overflow-y: scroll;
-  height: auto;
-}
-
 body h1 {
   color: #FFFFFF;
   font-size: 3rem;
@@ -171,12 +166,6 @@ body a:hover {
   text-decoration: underline;
 }
 
-body p {
-  color: red;
-  font-size: 1.3rem;
-  text-shadow: 1px 1px black;
-}
-
 body button {
   border-radius: 50px;
   border: none;
@@ -225,10 +214,9 @@ body .return {
 
 body .return:hover {
   background-color: #0975da;
-  /* Green */
 }
 
-body .cards-wrapper {
+body .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,12 +226,27 @@ body .cards-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 3rem;
+  color: #FFFFFF;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
-body .cards-wrapper .card {
+body .profile:hover {
+  color: #0975da;
+}
+
+body .profile-infos {
+  width: 60%;
+}
+
+body .profile-infos .profile-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,252 +256,12 @@ body .cards-wrapper .card {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FFFFFF;
-  border-radius: 30px;
-  margin: 20px;
-  height: 250px;
-  width: 450px;
-}
-
-body .cards-wrapper .card .booking-card-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-right: solid 1px black;
-  height: 80%;
-  width: 30%;
-}
-
-body .cards-wrapper .card .booking-card-left h1 {
-  color: black;
-}
-
-body .cards-wrapper .card .booking-card-left p {
-  color: black;
-}
-
-body .cards-wrapper .card .booking-card-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80%;
-  width: 70%;
-}
-
-body .cards-wrapper .card .booking-card-right .booking-card-member {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .booking-card-right .booking-card-member h2 {
-  text-transform: uppercase;
-  text-align: left;
+  color: #FFFFFF;
+  font-size: 1.5rem;
   width: 100%;
 }
 
-body .cards-wrapper .card .booking-card-right .booking-card-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .booking-card-right .booking-card-label p {
-  text-shadow: none;
-  color: rgba(100, 100, 100, 0.6);
-  text-align: left;
-}
-
-body .cards-wrapper .card .facility-card-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-right: solid 1px black;
-  height: 80%;
-  width: 30%;
-}
-
-body .cards-wrapper .card .facility-card-left h1 {
-  color: black;
-}
-
-body .cards-wrapper .card .facility-card-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80%;
-  width: 70%;
-}
-
-body .cards-wrapper .card .facility-card-right .facility-card-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .facility-card-right .facility-card-name h2 {
-  text-transform: uppercase;
-  text-align: left;
-  width: 100%;
-}
-
-body .cards-wrapper .card .facility-card-right .facility-card-prices {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .facility-card-right .facility-card-prices p {
-  text-shadow: none;
-  color: rgba(100, 100, 100, 0.6);
-  text-align: left;
-}
-
-body .cards-wrapper .card .member-card-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-right: solid 1px black;
-  height: 80%;
-  width: 30%;
-}
-
-body .cards-wrapper .card .member-card-left h1 {
-  color: black;
-}
-
-body .cards-wrapper .card .member-card-left p {
-  color: black;
-}
-
-body .cards-wrapper .card .member-card-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80%;
-  width: 70%;
-}
-
-body .cards-wrapper .card .member-card-right .member-card-member {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .member-card-right .member-card-member h2 {
-  text-transform: uppercase;
-  text-align: left;
-  width: 100%;
-}
-
-body .cards-wrapper .card .member-card-right .member-card-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .cards-wrapper .card .member-card-right .member-card-label p {
-  text-shadow: none;
-  color: rgba(100, 100, 100, 0.6);
-  text-align: left;
+body .profile-infos p {
+  color: #505050;
 }
 /*# sourceMappingURL=main.css.map */

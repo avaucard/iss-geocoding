@@ -11,10 +11,7 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    &.bookings, &.facilities, &.members, &.insertMember {
-        overflow-y: scroll;
-        height: auto;
-    }
+    
     h1 {
         color: #FFFFFF;
         font-size: 3rem;
@@ -113,11 +110,6 @@ body {
         }
         
     }
-    p {
-        color: red;
-        font-size: 1.3rem;
-        text-shadow: 1px 1px black;
-    }
     button {
         border-radius: 50px;
         border: none;
@@ -160,161 +152,41 @@ body {
     }
     .return:hover {
         background-color: rgb(9, 117, 218);
-        /* Green */
     }
-    .cards-wrapper {
+    .profile {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        width: 70%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        font-size: 3rem;
+        color: #FFFFFF;
 
-        .card {
+        transition-property: color;
+        transition-duration: 0.3s;
+    }
+    .profile:hover {
+        color: rgb(9, 117, 218);
+    }
+
+    .profile-infos {
+        width: 60%;
+        .profile-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FFFFFF;
-            border-radius: 30px;
-            margin: 20px;
-            height: 250px;
-            width: 450px;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            width: 100%;
+        }
 
-            .booking-card-left {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                border-right: solid 1px black;
-                height: 80%;
-                width: 30%;
-                h1 {
-                    color: black;
-                }
-                p {
-                    color: black;
-                }
-            }
-            .booking-card-right {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                height: 80%;
-                width: 70%;
-                .booking-card-member {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 90%;
-                    h2 {
-                        text-transform: uppercase;
-                        text-align: left;
-                        width: 100%;
-                    }
-                }
-                .booking-card-label {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 90%;
-                    p {
-                        text-shadow: none;
-                        color: rgba(100, 100, 100, 0.6);
-                        text-align: left;
-                    }
-                }
-            }
-        
-            .facility-card-left {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                border-right: solid 1px black;
-                height: 80%;
-                width: 30%;
-                h1 {
-                    color: black;
-                }
-            }
-            .facility-card-right {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                height: 80%;
-                width: 70%;
-                .facility-card-name {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 90%;
-                    h2 {
-                        text-transform: uppercase;
-                        text-align: left;
-                        width: 100%;
-                    }
-                }
-                .facility-card-prices {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 90%;
-                    p {
-                        text-shadow: none;
-                        color: rgba(100, 100, 100, 0.6);
-                        text-align: left;
-                    }
-                }
-            }
-
-            .member-card-left {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                border-right: solid 1px black;
-                height: 80%;
-                width: 30%;
-                h1 {
-                    color: black;
-                }
-                p {
-                    color: black;
-                }
-            }
-            .member-card-right {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex-direction: column;
-                height: 80%;
-                width: 70%;
-                .member-card-member {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 90%;
-                    h2 {
-                        text-transform: uppercase;
-                        text-align: left;
-                        width: 100%;
-                    }
-                }
-                .member-card-label {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 90%;
-                    p {
-                        text-shadow: none;
-                        color: rgba(100, 100, 100, 0.6);
-                        text-align: left;
-                    }
-                }
-            }
+        p {
+            color:  #505050;
         }
     }
+    
     
     
 }

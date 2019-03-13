@@ -3,9 +3,9 @@
 
         private static $instance = null;
 
-        const USER = "root";
-        const PASSWORD = "";
-        const DNS = 'mysql:host=localhost;dbname=equipe1';
+        const USER = "equipe1@localhost";
+        const PASSWORD = "Chouquette";
+        const DNS = 'mysql:host=hackathon.ais;dbname=equipe1';
 
         public static function connectDB(){
             try{
