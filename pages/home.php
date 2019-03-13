@@ -5,6 +5,8 @@ if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
 }
 require "navbar.php";
 require "../bin/API/DatabaseAPI.php";
+$api = new DatabaseAPI();
+$coords = $api->selectLongLat();
 ?> 
 <!DOCTYPE html>
 <html>
@@ -21,6 +23,8 @@ require "../bin/API/DatabaseAPI.php";
 <body>
     <a href="./profile.php"><i class="fas fa-user-circle profile"></i></a>
     <h1>Connected</h1>
+
+    <?php var_dump($coords) ?>
 
 
     

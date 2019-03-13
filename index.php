@@ -22,9 +22,9 @@
     
     <?php if(isset($_GET['error'])) { ?>
         <?php if($_GET['error'] == 1) : ?>
-            <p>Login or Password incorrect</p>
+            <p class="error">Login or Password incorrect</p>
         <?php elseif($_GET['error'] == 2) : ?>
-            <p>Session expired, please reconnect</p>
+            <p class="error">Session expired, please reconnect</p>
         <?php else : ?>
             
         <?php endif; ?>

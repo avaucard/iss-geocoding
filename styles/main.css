@@ -29,6 +29,12 @@ body h1 {
   font-weight: 400;
 }
 
+body p.error {
+  color: red;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px black;
+}
+
 body form {
   display: -webkit-box;
   display: -ms-flexbox;

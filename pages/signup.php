@@ -47,8 +47,8 @@
         </div>
         <div class="form-row">
             <div class="form-item">
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" placeholder="Address" required>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="City" required>
             </div>
             <div class="form-item">
                 <label for="zip_code">Zip Code</label>
