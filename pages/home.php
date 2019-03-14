@@ -1,9 +1,8 @@
 <?php
-$lifetime=600;
-session_set_cookie_params($lifetime);
 session_start();
 if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
-    // header('Location: ../index.php?error=2');
+    header('Location: ../index.php?error=2');
+    exit();
 }
 require "navbar.php";
 require "../bin/API/DatabaseAPI.php";
