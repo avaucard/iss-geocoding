@@ -1,7 +1,9 @@
 <?php
+$lifetime=600;
+session_set_cookie_params($lifetime);
 session_start();
 if(!isset($_SESSION["username"]) && !isset($_SESSION["password"])) {
-    header('Location: ../index.php?error=2');
+    // header('Location: ../index.php?error=2');
 }
 require "../bin/API/DatabaseAPI.php";
 ?> 
@@ -25,7 +27,7 @@ require "../bin/API/DatabaseAPI.php";
         <div class="profile-info">Surname: <p><?= $_SESSION['surname'] ?></p></div>
         <div class="profile-info">Username: <p><?= $_SESSION['username'] ?></p></div>
         <div class="profile-info">Email: <p><?= $_SESSION['email'] ?></p></div>
-        <div class="profile-info">Address: <p><?= $_SESSION['city'] ?></p></div>
+        <!-- <div class="profile-info">City: <p><?= $_SESSION['city'] ?></p></div> -->
         <div class="profile-info">Zip Code: <p><?= $_SESSION['zip_code'] ?></p></div>
         <div class="profile-info">Zip Code: <p><?= $_SESSION['country'] ?></p></div>
     </div>
