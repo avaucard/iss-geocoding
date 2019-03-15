@@ -30,6 +30,8 @@ class DatabaseAPI extends DBConnection{
                 exit;
             }
         }
+        header('Location: ../index.php?error=1');
+        exit;
         $this->disconnectDB();
     }
 

@@ -3,9 +3,9 @@
 
         private static $instance = null;
 
-        const USER = "<user>";
-        const PASSWORD = "<password>";
-        const DNS = 'mysql:host=<host>;dbname=<dbname>';
+        const USER = "root";
+        const PASSWORD = "";
+        const DNS = 'mysql:host=localhost;dbname=equipe1';
 
         public static function connectDB(){
             try{
